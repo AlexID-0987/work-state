@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
+import Timercomp from './Timercomp';
 
 
 function Timer() {
@@ -39,6 +40,7 @@ const myref=React.createRef();
               {text.map((item,index)=><li key={index.toString()}>{item}</li>)}
             </ul>
         </div>
+        <Timercomp/>
         </>
      );
 }
