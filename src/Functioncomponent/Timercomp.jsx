@@ -15,6 +15,8 @@ function Timercomp() {
            {
               if(minute===59)
               {
+                let newminute=0
+                setMinute(newminute)
                  setHour(hour+1)
               }
            }
@@ -35,6 +37,8 @@ function Timercomp() {
    let zerrofunc=()=>{
        let zerro=0
        setCount(zerro)
+       setMinute(zerro)
+       setHour(zerro)
    }
    
 
