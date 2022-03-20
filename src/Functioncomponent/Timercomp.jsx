@@ -2,12 +2,23 @@ import React from 'react'
 import {useState} from 'react'
 function Timercomp() {
     const [count,setCount]=useState(0)
+    const [minute,setMinute]=useState(0)
+    const [hour, setHour]=useState(0)
     const incrementvalue=()=>{
         setCount(count+1)
-        if(count===60)
+        if(count===59)
         {
             let start=0
             setCount(start)
+            
+           setMinute(minute+1)
+           {
+              if(minute===59)
+              {
+                 setHour(hour+1)
+              }
+           }
+        
         }
         
     }
@@ -30,7 +41,7 @@ function Timercomp() {
     return (  
         <>
         <div>
-            {count}
+         {hour}:{minute}:{count}
         </div>
         <div>
             <button className='btn btn-primary' onClick={zerrofunc}>Zerro</button>
